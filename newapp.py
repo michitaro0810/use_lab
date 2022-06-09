@@ -13,6 +13,7 @@ app = App(
 def message_hello(message, say):
     # イベントがトリガーされたチャンネルへ say() でメッセージを送信します
     say(f"Hey there <@{message['user']}>!")
+    # うんちぶり
 
 # アプリを起動します
 if name == "main":
