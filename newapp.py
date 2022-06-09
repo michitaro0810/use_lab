@@ -5,8 +5,8 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 
 # ボットトークンと署名シークレットを使ってアプリを初期化します
 app = App(
-    token="xoxb-337343413792-3624549796291-C7z6RMc0CCL7IvBpF2EoCwtY",
-    signing_secret="fd28327e4df2909cfb40dc7638d4c0be"
+    token="",
+    signing_secret=""
 )
 
 @app.message("hello")
