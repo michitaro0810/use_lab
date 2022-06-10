@@ -13,9 +13,11 @@ app = App(
 # https://slack.dev/bolt-python/api-docs/slack_bolt/kwargs_injection/args.html
 @app.message("hello")
 def message_hello(message, say):
+    print("Welcome")
     # イベントがトリガーされたチャンネルへ say() でメッセージを送信します
     say(f"Hey there <@{message['user']}>!")
 
 # アプリを起動します
 if __name__ == "__main__":
+    print("Welcome")
     app.start(port=int(os.environ.get("PORT", 3000)))
