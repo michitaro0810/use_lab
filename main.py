@@ -13,9 +13,19 @@ app = App(
 # https://slack.dev/bolt-python/api-docs/slack_bolt/kwargs_injection/args.html
 @app.message("hello")
 def message_hello(message, say):
+    say(f"Hey there <@{message['user']}>!")
+
+@app.message("add")
+def message_hello(message, say):
     print("Welcome")
     # イベントがトリガーされたチャンネルへ say() でメッセージを送信します
     say(f"Hey there <@{message['user']}>!")
+
+@app.command("/act")
+def repeat_text(ack, respond, command):
+    # command リクエストを確認
+    ack()
+    respond(f"{command['text']}")
 
 # アプリを起動します
 if __name__ == "__main__":
