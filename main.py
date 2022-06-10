@@ -18,4 +18,4 @@ def message_hello(message, say):
 
 # アプリを起動します
 if __name__ == "__main__":
-    app.start()
+    app.start(port=int(os.environ.get("PORT", 3000)))
